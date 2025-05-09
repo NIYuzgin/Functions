@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
@@ -15,8 +15,8 @@ void main()
 	setlocale(LC_ALL, "");
 
 	int a, b;
-	cout << "Введите два числа:"; cin >> a >> b; 
-	int c = Sum (a, b); // Использование функции (Вызов функции - Function call)
+	cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°:"; cin >> a >> b; 
+	int c = Sum (a, b); // РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёРё (Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё - Function call)
 
 	cout << a << " + "<< b << " = " << c << endl;
 	cout << a << " - " << b << " = " << Difference (a,b) << endl;
