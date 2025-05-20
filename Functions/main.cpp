@@ -20,7 +20,7 @@ void main() {
 	cout << "Введите два числа:"; cin >> a >> b; 
 	int c = Sum (a, b); // Использование функции (Вызов функции - Function call)
 
-	cout << a << " + "<< b << " = " << c << endl;
+	cout << a << " + " << b << " = " << c << endl;
 	cout << a << " - " << b << " = " << Difference (a,b) << endl;
 	cout << a << " * " << b << " = " << Product(a, b) << endl;
 	cout << a << " / " << b << " = " << Quotient(a, b) << endl;
