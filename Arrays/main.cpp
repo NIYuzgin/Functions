@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -118,7 +118,7 @@ void Sum(int arr[], const int n) {
 	for (int i = 0; i < n; i++) {
 		amount += arr[i];
 	}
-	cout << endl << endl << "Ñóììà ýëåìåíòîâ ìàññèâà: " << amount << endl;
+	cout << endl << endl << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << amount << endl;
 }
 
 void Avg(int arr[], const int n) {
@@ -128,7 +128,7 @@ void Avg(int arr[], const int n) {
 		amount += arr[i];
 	}
 	average_amount = amount / n;
-	cout << endl << endl << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà: " << average_amount << endl;
+	cout << endl << endl << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << average_amount << endl;
 }
 
 void MinValue(int arr[], const int n) {
@@ -136,7 +136,7 @@ void MinValue(int arr[], const int n) {
 	for (int i = 0; i < n; i++) {
 		if (min > arr[i]) min = arr[i];
 	}
-	cout << endl << endl << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << min << endl;
+	cout << endl << endl << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << min << endl;
 }
 
 void MaxValue(int arr[], const int n) {
@@ -144,12 +144,12 @@ int max = arr[0];
 for (int i = 0; i < n; i++) {
 	if (max < arr[i]) max = arr[i];
 }
-cout << endl << endl << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << max << endl;
+cout << endl << endl << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << max << endl;
 }
 
 void ShiftLeft(int arr[], const int n) {
 	int m;
-	cout << endl << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ äëÿ ñäâèãà âëåâî:" << endl;
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ ÑÐ´Ð²Ð¸Ð³Ð° Ð²Ð»ÐµÐ²Ð¾:" << endl;
 	cin >> m;
 	for (int j = 0; j < m; j++) {
 		int temp = arr[0];
@@ -167,7 +167,7 @@ void ShiftLeft(int arr[], const int n) {
 
 void ShiftRight(int arr[], const int n) {
 	int l;
-	cout << endl << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ äëÿ ñäâèãà âïðàâî:" << endl;
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ ÑÐ´Ð²Ð¸Ð³Ð° Ð²Ð¿Ñ€Ð°Ð²Ð¾:" << endl;
 	cin >> l;
 	for (int j = 0; j < l; j++) {
 		int temp = arr[n - 1];
