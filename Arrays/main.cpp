@@ -34,7 +34,6 @@ void main() {
 	cout << "Средне-арифметическое значение массива: " << Avg(arr, n) << endl;
 	cout << "Минимальное значение в массиве: " <<minValueIn(arr, n) << endl;
 	cout << "Максимальное значение в массиве: " << maxValueIn(arr, n) << endl;
-
 	
 	int number_of_shifts;
 	cout << "введите количество сдвигов: ";
