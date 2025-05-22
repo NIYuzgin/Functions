@@ -44,7 +44,6 @@ void main() {
 	ShiftRight(arr, n, number_of_shifts);
 	Print(arr, n);
 
-
 	const int SIZE = 8;
 	double brr[SIZE];
 	FillRand(brr, SIZE);
@@ -147,16 +146,5 @@ void ShiftLeft(int arr[], const int n, int number_of_shifts)
 void ShiftRight(int arr[], const int n, const int numbers_of_shifts) {
 	ShiftLeft(arr, n, n - numbers_of_shifts);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
