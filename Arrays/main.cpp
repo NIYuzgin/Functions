@@ -44,6 +44,7 @@ void main() {
 	Print(arr, n);
 
 	const int SIZE = 8;
+	const int s = 8;
 	double brr[SIZE];
 	FillRand(brr, SIZE);
 	Print(brr, SIZE);
