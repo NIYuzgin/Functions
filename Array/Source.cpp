@@ -1,9 +1,9 @@
-ï»¿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
-void FillRand (int arr[], const int n, int minRand = 0, int maxRand = 100);
-void FillRand (double arr[], const int n, int minRand = 0, int maxRand = 100);
+void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
+void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
@@ -16,7 +16,7 @@ double Avg(int arr[], const int n);
 int minValueIn(int arr[], const int n);
 int maxValueIn(int arr[], const int n);
 
-void ShiftLeft(int arr[], const int n, const int number_of_shifts);
+void ShiftLeft(int arr[], const int n, const int numbers_of_shifts);
 void ShiftRight(int arr[], const int n, const int numbers_of_shifts);
 
 
@@ -24,33 +24,38 @@ void main() {
 	setlocale(LC_ALL, "");
 
 	const int n = 5;
+
 	int arr[n];
-
 	FillRand(arr, n);
-	Print (arr, n);
-	Sort (arr, n);
 	Print(arr, n);
-	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr, n) << endl;
-	cout << "Ð¡Ñ€ÐµÐ´Ð½Ðµ-Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(arr, n) << endl;
-	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " <<minValueIn(arr, n) << endl;
-	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << maxValueIn(arr, n) << endl;
+	Sort(arr, n);
+	Print(arr, n);
+	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(arr, n) << endl;
+	cout << "Ñðåäíå-àðèôìåòè÷åñêîå çíà÷åíèå ìàññèâà: " << Avg(arr, n) << endl;
+	cout << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << minValueIn(arr, n) << endl;
+	cout << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << maxValueIn(arr, n) << endl;
 
-	
 	int number_of_shifts;
-	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: ";
-	cin >> number_of_shifts;
+	cout << "ââåäèòå êîëè÷åñòâî ñäâèãîâ: "; cin >> number_of_shifts;
 	ShiftLeft(arr, n, number_of_shifts);
 	Print(arr, n);
 	ShiftRight(arr, n, number_of_shifts);
 	Print(arr, n);
 
 
+
+
+
 	const int SIZE = 8;
+
 	double brr[SIZE];
 	FillRand(brr, SIZE);
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
 	Print(brr, SIZE);
+
+
+
 }
 
 void FillRand(int arr[], const int n, int minRand, int maxRand) {
@@ -67,6 +72,8 @@ void FillRand(double arr[], const int n, int minRand, int maxRand) {
 		arr[i] /= 100;
 	}
 }
+
+
 
 void Print(int arr[], const int n) {
 	for (int i = 0; i < n; i++) {
@@ -114,7 +121,7 @@ int Sum(int arr[], const int n)
 }
 
 double Avg(int arr[], const int n) {
-	return (double) Sum(arr, n) / n;
+	return (double)Sum(arr, n) / n;
 }
 
 int minValueIn(int arr[], const int n) {
@@ -133,28 +140,20 @@ int maxValueIn(int arr[], const int n) {
 	return max;
 }
 
-void ShiftLeft(int arr[], const int n, int number_of_shifts)
+void ShiftLeft(int arr[], const int n, const int numbers_of_shifts)
 {
-	for (int i = 0; i < number_of_shifts; i++) {
+	for (int i = 0; i < numbers_of_shifts; i++) {
 		int buffer = arr[0];
-		for (int i = 0; i < n - 1; i++) {
-			arr[i] = arr[i+1];
+		for (int i = 0; i < n; i++) {
+			arr[i - 1] = arr[i];
 		}
 		arr[n - 1] = buffer;
 	}
 }
 
-void ShiftRight(int arr[], const int n, const int numbers_of_shifts) {
+void ShiftRight(int arr[], const int n, const int numbers_of_shifts)
+{
+
 	ShiftLeft(arr, n, n - numbers_of_shifts);
+
 }
-
-
-
-
-
-
-
-
-
-
-
