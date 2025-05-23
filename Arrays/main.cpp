@@ -36,7 +36,7 @@ void main() {
 	cout << "Максимальное значение в массиве: " << maxValueIn(arr, n) << endl;
 	
 	int number_of_shifts;
-	cout << "введите количество сдвигов: ";
+	cout << "введите количество сдвигов: " << endl;;
 	cin >> number_of_shifts;
 	ShiftLeft(arr, n, number_of_shifts);
 	Print(arr, n);
